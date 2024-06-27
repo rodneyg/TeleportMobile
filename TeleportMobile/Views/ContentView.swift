@@ -36,7 +36,7 @@ struct ContentView: View {
         VStack {
             Image(systemName: "hourglass").resizable().aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
-            Text("Loading NFTs...")
+            Text("Loading...")
         }
     }
     
