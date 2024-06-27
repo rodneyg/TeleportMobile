@@ -18,6 +18,38 @@
             endingLineNumber = "53"
             landmarkName = "fetchNFTs()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6176948-D80E-4D5E-8985-A5353E796903 - 994489b605d2c55e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TeleportMobile.NFTViewModel.fetchNFTs() async -&gt; ()"
+                  moduleName = "TeleportMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodneygainousjr/Downloads/TeleportMobile/TeleportMobile/ViewModels/NFTViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+               <Location
+                  uuid = "C6176948-D80E-4D5E-8985-A5353E796903 - 994489b605d2c5fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TeleportMobile.NFTViewModel.fetchNFTs() async -&gt; ()"
+                  moduleName = "TeleportMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodneygainousjr/Downloads/TeleportMobile/TeleportMobile/ViewModels/NFTViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "3084">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
