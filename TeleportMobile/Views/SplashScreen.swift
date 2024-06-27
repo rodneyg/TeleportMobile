@@ -23,31 +23,18 @@ struct SplashScreen: View {
                 VStack {
                     ZStack {
                         ForEach(0..<3) { i in
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue.opacity(0.7), lineWidth: 5)
-                                .frame(width: 100, height: 140)
-                                .rotationEffect(.degrees(Double(i) * 60))
+                            RoundedRectangle(cornerRadius: 20).stroke(Color.blue.opacity(0.7), lineWidth: 5)
+                                .frame(width: 100, height: 140).rotationEffect(.degrees(Double(i) * 60))
                                 .rotationEffect(.degrees(rotation))
                         }
                         
-                        Image("tensorians")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 80, height: 80)
-                    }
-                    .scaleEffect(size)
-                    .opacity(opacity)
+                        Image("tensorians").resizable().aspectRatio(contentMode: .fit).frame(width: 80, height: 80)
+                    }.scaleEffect(size).opacity(opacity)
                     
-                    Text("Tensorians NFTs")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.top, 20)
-                        .scaleEffect(size)
-                        .opacity(opacity)
+                    Text("Tensorians NFTs").font(.largeTitle).fontWeight(.bold)
+                        .foregroundColor(.white).padding(.top, 20).scaleEffect(size).opacity(opacity)
                 }
-            }
-            .onAppear {
+            }.onAppear {
                 withAnimation(.easeInOut(duration: 1.5)) {
                     self.size = 1.0
                     self.opacity = 1.0
