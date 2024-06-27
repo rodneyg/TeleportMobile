@@ -36,11 +36,13 @@ class NFTViewModel: ObservableObject {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
+                DispatchQueue.main.async { self.isLoading = false }
                 return
             }
             
             guard let data = data else {
                 print("No data received")
+                DispatchQueue.main.async { self.isLoading = false }
                 return
             }
             
@@ -49,6 +51,7 @@ class NFTViewModel: ObservableObject {
                       let result = jsonResult["result"] as? [String: Any],
                       let items = result["items"] as? [[String: Any]] else {
                     print("Invalid JSON structure")
+                    DispatchQueue.main.async { self.isLoading = false }
                     return
                 }
                 
