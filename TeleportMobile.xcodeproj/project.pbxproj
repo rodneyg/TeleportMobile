@@ -14,6 +14,9 @@
 		478408292C2D0B1D00FEE9CF /* TeleportMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478408282C2D0B1D00FEE9CF /* TeleportMobileTests.swift */; };
 		478408332C2D0B1D00FEE9CF /* TeleportMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478408322C2D0B1D00FEE9CF /* TeleportMobileUITests.swift */; };
 		478408352C2D0B1D00FEE9CF /* TeleportMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478408342C2D0B1D00FEE9CF /* TeleportMobileUITestsLaunchTests.swift */; };
+		478408482C2D0D2900FEE9CF /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478408472C2D0D2900FEE9CF /* NFT.swift */; };
+		4784084A2C2D0DFF00FEE9CF /* NFTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478408492C2D0DFF00FEE9CF /* NFTViewModel.swift */; };
+		4784084C2C2D0F8B00FEE9CF /* NFTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4784084B2C2D0F8B00FEE9CF /* NFTView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		4784082E2C2D0B1D00FEE9CF /* TeleportMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleportMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		478408322C2D0B1D00FEE9CF /* TeleportMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleportMobileUITests.swift; sourceTree = "<group>"; };
 		478408342C2D0B1D00FEE9CF /* TeleportMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleportMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		478408472C2D0D2900FEE9CF /* NFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFT.swift; sourceTree = "<group>"; };
+		478408492C2D0DFF00FEE9CF /* NFTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTViewModel.swift; sourceTree = "<group>"; };
+		4784084B2C2D0F8B00FEE9CF /* NFTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +101,13 @@
 		478408152C2D0B1C00FEE9CF /* TeleportMobile */ = {
 			isa = PBXGroup;
 			children = (
+				478408462C2D0D0000FEE9CF /* Resources */,
+				478408452C2D0CF800FEE9CF /* Utils */,
+				478408442C2D0CEF00FEE9CF /* Services */,
+				478408432C2D0CD500FEE9CF /* ViewModels */,
+				478408422C2D0CD000FEE9CF /* Views */,
+				478408412C2D0CA300FEE9CF /* Models */,
 				478408162C2D0B1C00FEE9CF /* TeleportMobileApp.swift */,
-				478408182C2D0B1C00FEE9CF /* ContentView.swift */,
-				4784081A2C2D0B1D00FEE9CF /* Assets.xcassets */,
 				4784081C2C2D0B1D00FEE9CF /* TeleportMobile.entitlements */,
 				4784081D2C2D0B1D00FEE9CF /* Preview Content */,
 			);
@@ -127,6 +137,53 @@
 				478408342C2D0B1D00FEE9CF /* TeleportMobileUITestsLaunchTests.swift */,
 			);
 			path = TeleportMobileUITests;
+			sourceTree = "<group>";
+		};
+		478408412C2D0CA300FEE9CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				478408472C2D0D2900FEE9CF /* NFT.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		478408422C2D0CD000FEE9CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				478408182C2D0B1C00FEE9CF /* ContentView.swift */,
+				4784084B2C2D0F8B00FEE9CF /* NFTView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		478408432C2D0CD500FEE9CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				478408492C2D0DFF00FEE9CF /* NFTViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		478408442C2D0CEF00FEE9CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		478408452C2D0CF800FEE9CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		478408462C2D0D0000FEE9CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4784081A2C2D0B1D00FEE9CF /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				478408192C2D0B1C00FEE9CF /* ContentView.swift in Sources */,
+				4784084A2C2D0DFF00FEE9CF /* NFTViewModel.swift in Sources */,
 				478408172C2D0B1C00FEE9CF /* TeleportMobileApp.swift in Sources */,
+				4784084C2C2D0F8B00FEE9CF /* NFTView.swift in Sources */,
+				478408482C2D0D2900FEE9CF /* NFT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +482,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TeleportMobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tensorians;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -458,6 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TeleportMobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tensorians;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
