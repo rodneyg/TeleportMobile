@@ -10,10 +10,23 @@ import SwiftUI
 @main
 struct TeleportMobileApp: App {
     @AppStorage("isDarkMode") private var isDarkMode = true
-
+    @State private var showSplash = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().preferredColorScheme(isDarkMode ? .dark : .light)
+            ZStack {
+                ContentView()
+                
+                if showSplash {
+                    SplashScreen().transition(.opacity).zIndex(1).onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                            withAnimation {
+                                showSplash = false
+                            }
+                        }
+                    }
+                }
+            }.preferredColorScheme(.dark)
         }
     }
 }
