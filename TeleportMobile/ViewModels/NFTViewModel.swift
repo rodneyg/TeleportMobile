@@ -9,8 +9,10 @@ import Foundation
 
 class NFTViewModel: ObservableObject {
     @Published var nfts: [NFT] = []
+    @Published var isLoading = false
     
-    func fetchNFTs() {
+    func fetchNFTs() async {
+        self.isLoading = true
         let urlString = "https://mainnet.helius-rpc.com/?api-key=e0743acb-70cd-49c8-8db0-c9b8470fa2e0"
         guard let url = URL(string: urlString) else { return }
         
@@ -33,12 +35,14 @@ class NFTViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
+                self.isLoading = false
                 print("Error: \(error.localizedDescription)")
                 return
             }
             
             guard let data = data else {
                 print("No data received")
+                self.isLoading = false
                 return
             }
             
@@ -47,6 +51,7 @@ class NFTViewModel: ObservableObject {
                       let result = jsonResult["result"] as? [String: Any],
                       let items = result["items"] as? [[String: Any]] else {
                     print("Invalid JSON structure")
+                    self.isLoading = false
                     return
                 }
                 
@@ -59,6 +64,7 @@ class NFTViewModel: ObservableObject {
                               let links = content["links"] as? [String: Any],
                               let imageURL = links["image"] as? String else {
                             print("Failed to parse NFT: \(item)")
+                            self.isLoading = false
                             return nil
                     }
                     return NFT(id: id, name: name, imageURL: imageURL, description: description)
@@ -68,10 +74,12 @@ class NFTViewModel: ObservableObject {
                 
                 DispatchQueue.main.async {
                     self.nfts = nfts
+                    self.isLoading = false
                 }
                 
             } catch {
                 print("Failed to parse JSON: \(error.localizedDescription)")
+                self.isLoading = false
             }
         }.resume()
     }
