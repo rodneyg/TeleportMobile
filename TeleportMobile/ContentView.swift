@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = NFTViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
+                    ForEach(viewModel.nfts) { nft in
+                        NFTView(nft: nft)
+                    }
+                }.padding()
+            }.navigationTitle("Tensorians NFTs")
+        }.onAppear {
+            viewModel.fetchNFTs()
         }
-        .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }
