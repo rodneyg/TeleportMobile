@@ -14,13 +14,13 @@
             filePath = "TeleportMobile/ViewModels/NFTViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "fetchNFTs()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C6176948-D80E-4D5E-8985-A5353E796903 - 994489b605d2c55e"
+                  uuid = "C6176948-D80E-4D5E-8985-A5353E796903 - 994489b605d2c439"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/rodneygainousjr/Downloads/TeleportMobile/TeleportMobile/ViewModels/NFTViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "1272">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1692">
                </Location>
                <Location
-                  uuid = "C6176948-D80E-4D5E-8985-A5353E796903 - 994489b605d2c5fb"
+                  uuid = "C6176948-D80E-4D5E-8985-A5353E796903 - 994489b605d2c439"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +45,9 @@
                   urlString = "file:///Users/rodneygainousjr/Downloads/TeleportMobile/TeleportMobile/ViewModels/NFTViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "3084">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "3024">
                </Location>
             </Locations>
          </BreakpointContent>

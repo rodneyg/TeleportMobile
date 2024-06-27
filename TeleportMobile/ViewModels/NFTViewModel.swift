@@ -35,14 +35,12 @@ class NFTViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                self.isLoading = false
                 print("Error: \(error.localizedDescription)")
                 return
             }
             
             guard let data = data else {
                 print("No data received")
-                self.isLoading = false
                 return
             }
             
@@ -51,7 +49,6 @@ class NFTViewModel: ObservableObject {
                       let result = jsonResult["result"] as? [String: Any],
                       let items = result["items"] as? [[String: Any]] else {
                     print("Invalid JSON structure")
-                    self.isLoading = false
                     return
                 }
                 
@@ -76,10 +73,8 @@ class NFTViewModel: ObservableObject {
                     self.nfts = nfts
                     self.isLoading = false
                 }
-                
             } catch {
                 print("Failed to parse JSON: \(error.localizedDescription)")
-                self.isLoading = false
             }
         }.resume()
     }
